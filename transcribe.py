@@ -7,8 +7,7 @@ Uso:
 Saída:
     <arquivo>.md  — transcrição em Markdown com timestamps, pronta para enviar a uma IA.
 """
-#python transcribe.py videos/repasse-alexandre-sprint2.mp4 --model medium --lang pt --output transcriptions/repasse-alexandre-sprint2.md
-#python transcribe.py videos/primeira-reuniao-laize-261009.mp4 --model medium --lang pt --output transcriptions/primeira-reuniao-laize-261009.md
+#python transcribe.py videos/reuniao-x.mp4 --model medium --lang pt --output transcriptions/reuniao-x.md
 
 import sys
 import argparse

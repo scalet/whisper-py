@@ -19,12 +19,57 @@ py -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
+Para ativar o ambiente no PowerShell:
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+```
+
+Para ativar o ambiente no Git Bash (Windows):
+
+```bash
+source .venv/Scripts/activate
+```
+
+O ambiente `.venv` e local e esta excluido do Git. Repita esses comandos depois de clonar ou copiar o projeto.
+
+## Instalacao no Linux (Bash)
+
+Garanta que Python 3 e o suporte a ambientes virtuais estejam instalados. Em distribuicoes Debian ou Ubuntu, use:
+
+```bash
+sudo apt update
+sudo apt install python3 python3-venv
+```
+
+No terminal, dentro desta pasta, crie o ambiente virtual e instale as dependencias:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install --upgrade pip
+.venv/bin/python -m pip install -r requirements.txt
+```
+
+Para ativar o ambiente no Bash:
+
+```bash
+source .venv/bin/activate
+```
+
 O ambiente `.venv` e local e esta excluido do Git. Repita esses comandos depois de clonar ou copiar o projeto.
 
 ## Uso
 
+No Windows (PowerShell):
+
 ```powershell
 .\.venv\Scripts\python.exe transcribe.py "videos\reuniao.mp4" --model medium --lang pt --output "transcriptions\reuniao.md"
+```
+
+No Linux (Bash):
+
+```bash
+.venv/bin/python transcribe.py "videos/reuniao.mp4" --model medium --lang pt --output "transcriptions/reuniao.md"
 ```
 
 Argumentos:
